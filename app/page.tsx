@@ -4,6 +4,7 @@ import {
   ArrowRight,
   ClipboardList,
   Gauge,
+  Sparkles,
   TriangleAlert,
 } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
@@ -61,7 +62,17 @@ export default function DashboardPage() {
       <PageHeader
         title="Plant Overview"
         description="Fleet health, failure predictions and maintenance priorities"
-      />
+      >
+        <Button
+          render={<Link href="/investigation" />}
+          nativeButton={false}
+          size="sm"
+        >
+          <Sparkles data-icon="inline-start" />
+          <span className="hidden sm:inline">AI Investigation</span>
+          <span className="sm:hidden">Investigate</span>
+        </Button>
+      </PageHeader>
       <main className="flex flex-1 flex-col gap-6 p-4 md:p-6">
         {/* KPI cards */}
         <section
@@ -96,11 +107,14 @@ export default function DashboardPage() {
                   Live health scores across all monitored assets
                 </CardDescription>
               </div>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/equipment">
-                  View all
-                  <ArrowRight data-icon="inline-end" />
-                </Link>
+              <Button
+                render={<Link href="/equipment" />}
+                nativeButton={false}
+                variant="ghost"
+                size="sm"
+              >
+                View all
+                <ArrowRight data-icon="inline-end" />
               </Button>
             </CardHeader>
             <CardContent>
@@ -125,13 +139,19 @@ export default function DashboardPage() {
                             {eq.id} · {eq.area}
                           </span>
                         </div>
-                        <div className="hidden w-28 sm:block">
-                          <Progress value={eq.healthScore} className="h-1.5" />
+                        <div className="hidden w-28 shrink-0 sm:block">
+                          <Progress
+                            value={eq.healthScore}
+                            className="h-1.5 [&_[data-slot=progress-track]]:h-1.5 [&_[data-slot=progress-track]]:bg-muted-foreground/20"
+                          />
                         </div>
-                        <span className="w-10 text-right font-mono text-sm font-medium">
+                        <span className="w-10 shrink-0 text-right font-mono text-sm font-medium">
                           {eq.healthScore}%
                         </span>
-                        <Badge variant="outline" className={cfg.badge}>
+                        <Badge
+                          variant="outline"
+                          className={`${cfg.badge} w-[4.75rem] shrink-0 justify-center`}
+                        >
                           {cfg.label}
                         </Badge>
                       </Link>
@@ -149,11 +169,14 @@ export default function DashboardPage() {
                 <CardTitle>Maintenance Priorities</CardTitle>
                 <CardDescription>Ranked by AI risk score</CardDescription>
               </div>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/planner">
-                  Planner
-                  <ArrowRight data-icon="inline-end" />
-                </Link>
+              <Button
+                render={<Link href="/planner" />}
+                nativeButton={false}
+                variant="ghost"
+                size="sm"
+              >
+                Planner
+                <ArrowRight data-icon="inline-end" />
               </Button>
             </CardHeader>
             <CardContent>

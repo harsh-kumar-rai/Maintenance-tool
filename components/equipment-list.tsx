@@ -59,7 +59,7 @@ export function EquipmentList() {
             aria-label="Search equipment"
           />
         </div>
-        <Select value={area} onValueChange={setArea}>
+        <Select value={area} onValueChange={(v) => v && setArea(v)}>
           <SelectTrigger className="w-full sm:w-44" aria-label="Filter by area">
             <SelectValue />
           </SelectTrigger>

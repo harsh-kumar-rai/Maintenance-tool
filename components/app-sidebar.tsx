@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
@@ -9,6 +10,8 @@ import {
   ClipboardList,
   BookOpen,
   Factory,
+  FileText,
+  Loader2,
 } from "lucide-react"
 import {
   Sidebar,
@@ -29,10 +32,17 @@ const navItems = [
   { title: "AI Investigation", href: "/investigation", icon: Sparkles },
   { title: "Planner", href: "/planner", icon: ClipboardList },
   { title: "Knowledge Base", href: "/knowledge", icon: BookOpen },
+  { title: "Reports & Logbook", href: "/reports", icon: FileText },
 ]
 
 export function AppSidebar() {
   const pathname = usePathname()
+  const [pendingHref, setPendingHref] = useState<string | null>(null)
+
+  // Clear the pending indicator once the route has actually changed
+  useEffect(() => {
+    setPendingHref(null)
+  }, [pathname])
 
   return (
     <Sidebar>
@@ -61,13 +71,28 @@ export function AppSidebar() {
                   item.href === "/"
                     ? pathname === "/"
                     : pathname.startsWith(item.href)
+                const pending = pendingHref === item.href && !active
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={active}>
-                      <Link href={item.href}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </Link>
+                    <SidebarMenuButton
+                      render={
+                        <Link
+                          href={item.href}
+                          onClick={() => {
+                            if (!active) setPendingHref(item.href)
+                          }}
+                        />
+                      }
+                      isActive={active}
+                    >
+                      <item.icon />
+                      <span>{item.title}</span>
+                      {pending && (
+                        <Loader2
+                          className="ml-auto size-3.5 animate-spin text-sidebar-foreground/60"
+                          aria-label="Loading page"
+                        />
+                      )}
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 )

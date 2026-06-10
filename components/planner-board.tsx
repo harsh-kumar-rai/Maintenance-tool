@@ -111,15 +111,15 @@ function PlanCard({
           <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
             {plan.summary}
           </p>
-          <CollapsibleTrigger asChild>
-            <Button variant="ghost" size="sm" className="w-fit">
-              <ChevronDown
-                data-icon="inline-start"
-                className={cn("transition-transform", open && "rotate-180")}
-              />
-              {open ? "Hide" : "Show"} procedure ({doneSteps}/
-              {plan.steps.length} steps)
-            </Button>
+          <CollapsibleTrigger
+            render={<Button variant="ghost" size="sm" className="w-fit" />}
+          >
+            <ChevronDown
+              data-icon="inline-start"
+              className={cn("transition-transform", open && "rotate-180")}
+            />
+            {open ? "Hide" : "Show"} procedure ({doneSteps}/
+            {plan.steps.length} steps)
           </CollapsibleTrigger>
         </CardHeader>
         <CollapsibleContent>
