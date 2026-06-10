@@ -9,6 +9,7 @@ import {
   ClipboardList,
   BookOpen,
   Factory,
+  FileText,
 } from "lucide-react"
 import {
   Sidebar,
@@ -29,6 +30,7 @@ const navItems = [
   { title: "AI Investigation", href: "/investigation", icon: Sparkles },
   { title: "Planner", href: "/planner", icon: ClipboardList },
   { title: "Knowledge Base", href: "/knowledge", icon: BookOpen },
+  { title: "Reports & Logbook", href: "/reports", icon: FileText },
 ]
 
 export function AppSidebar() {
@@ -63,11 +65,12 @@ export function AppSidebar() {
                     : pathname.startsWith(item.href)
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton asChild isActive={active}>
-                      <Link href={item.href}>
-                        <item.icon />
-                        <span>{item.title}</span>
-                      </Link>
+                    <SidebarMenuButton
+                      render={<Link href={item.href} />}
+                      isActive={active}
+                    >
+                      <item.icon />
+                      <span>{item.title}</span>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 )

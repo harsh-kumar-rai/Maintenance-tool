@@ -48,17 +48,22 @@ export default async function EquipmentDetailPage({
     <div className="flex min-h-svh flex-col">
       <PageHeader title={eq.name} description={`${eq.id} · ${eq.type} · ${eq.area}`}>
         <div className="flex items-center gap-2">
-          <Button asChild variant="outline" size="sm">
-            <Link href="/equipment">
-              <ArrowLeft data-icon="inline-start" />
-              <span className="hidden sm:inline">All equipment</span>
-            </Link>
+          <Button
+            render={<Link href="/equipment" />}
+            nativeButton={false}
+            variant="outline"
+            size="sm"
+          >
+            <ArrowLeft data-icon="inline-start" />
+            <span className="hidden sm:inline">All equipment</span>
           </Button>
-          <Button asChild size="sm">
-            <Link href={`/investigation?equipment=${eq.id}`}>
-              <Sparkles data-icon="inline-start" />
-              Investigate with AI
-            </Link>
+          <Button
+            render={<Link href={`/investigation?equipment=${eq.id}`} />}
+            nativeButton={false}
+            size="sm"
+          >
+            <Sparkles data-icon="inline-start" />
+            Investigate with AI
           </Button>
         </div>
       </PageHeader>

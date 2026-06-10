@@ -96,11 +96,13 @@ export default function DashboardPage() {
                   Live health scores across all monitored assets
                 </CardDescription>
               </div>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/equipment">
-                  View all
-                  <ArrowRight data-icon="inline-end" />
-                </Link>
+              <Button
+                render={<Link href="/equipment" />}
+                variant="ghost"
+                size="sm"
+              >
+                View all
+                <ArrowRight data-icon="inline-end" />
               </Button>
             </CardHeader>
             <CardContent>
@@ -149,11 +151,13 @@ export default function DashboardPage() {
                 <CardTitle>Maintenance Priorities</CardTitle>
                 <CardDescription>Ranked by AI risk score</CardDescription>
               </div>
-              <Button asChild variant="ghost" size="sm">
-                <Link href="/planner">
-                  Planner
-                  <ArrowRight data-icon="inline-end" />
-                </Link>
+              <Button
+                render={<Link href="/planner" />}
+                variant="ghost"
+                size="sm"
+              >
+                Planner
+                <ArrowRight data-icon="inline-end" />
               </Button>
             </CardHeader>
             <CardContent>

@@ -28,6 +28,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Separator } from "@/components/ui/separator"
 import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from "@/components/ui/empty"
 import { documents, getEquipment, type KnowledgeDoc } from "@/lib/demo-data"
+import { KnowledgeUpload } from "@/components/knowledge-upload"
 import { cn } from "@/lib/utils"
 
 const typeConfig: Record<
@@ -49,13 +50,21 @@ const typeConfig: Record<
 const docTypes = ["All", "Manual", "SOP", "Failure Report", "OEM Bulletin"] as const
 
 export function KnowledgeBrowser() {
+  const [docs, setDocs] = useState<KnowledgeDoc[]>(documents)
+  const [newDocIds, setNewDocIds] = useState<string[]>([])
   const [query, setQuery] = useState("")
   const [type, setType] = useState<(typeof docTypes)[number]>("All")
   const [selectedId, setSelectedId] = useState<string>(documents[0].id)
 
+  function handleIndexed(doc: KnowledgeDoc) {
+    setDocs((prev) => [doc, ...prev])
+    setNewDocIds((prev) => [...prev, doc.id])
+    setSelectedId(doc.id)
+  }
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
-    return documents.filter((d) => {
+    return docs.filter((d) => {
       if (type !== "All" && d.type !== type) return false
       if (!q) return true
       return (
@@ -68,7 +77,7 @@ export function KnowledgeBrowser() {
         )
       )
     })
-  }, [query, type])
+  }, [docs, query, type])
 
   const selected =
     filtered.find((d) => d.id === selectedId) ?? filtered[0] ?? null
@@ -87,19 +96,24 @@ export function KnowledgeBrowser() {
             aria-label="Search knowledge base"
           />
         </InputGroup>
-        <ToggleGroup
-          type="single"
-          variant="outline"
-          value={type}
-          onValueChange={(v) => v && setType(v as (typeof docTypes)[number])}
-          className="flex-wrap"
-        >
-          {docTypes.map((t) => (
-            <ToggleGroupItem key={t} value={t} className="text-xs">
-              {t}
-            </ToggleGroupItem>
-          ))}
-        </ToggleGroup>
+        <div className="flex flex-wrap items-center gap-2">
+          <ToggleGroup
+            variant="outline"
+            value={[type]}
+            onValueChange={(v) => {
+              const next = v[0]
+              if (next) setType(next as (typeof docTypes)[number])
+            }}
+            className="flex-wrap"
+          >
+            {docTypes.map((t) => (
+              <ToggleGroupItem key={t} value={t} className="text-xs">
+                {t}
+              </ToggleGroupItem>
+            ))}
+          </ToggleGroup>
+          <KnowledgeUpload onIndexed={handleIndexed} />
+        </div>
       </div>
 
       {filtered.length === 0 ? (
@@ -144,6 +158,12 @@ export function KnowledgeBrowser() {
                       <Badge variant="outline" className={typeConfig[doc.type].badge}>
                         {doc.type}
                       </Badge>
+                      {newDocIds.includes(doc.id) && (
+                        <Badge className="bg-primary text-primary-foreground">
+                          <Sparkles className="size-3" />
+                          Just indexed
+                        </Badge>
+                      )}
                       <span className="font-mono text-xs text-muted-foreground">
                         {doc.id} · {doc.pages} pages
                       </span>
@@ -175,17 +195,22 @@ export function KnowledgeBrowser() {
                   <span className="text-xs font-medium text-muted-foreground">
                     Linked equipment:
                   </span>
+                  {selected.equipmentIds.length === 0 && (
+                    <span className="text-xs text-muted-foreground">
+                      None yet — link equipment to improve retrieval
+                    </span>
+                  )}
                   {selected.equipmentIds.map((id) => {
                     const eq = getEquipment(id)
                     return (
                       <Button
                         key={id}
-                        asChild
+                        render={<Link href={`/equipment/${id}`} />}
                         variant="outline"
                         size="sm"
                         className="h-7 font-mono text-xs"
                       >
-                        <Link href={`/equipment/${id}`}>{eq?.name ?? id}</Link>
+                        {eq?.name ?? id}
                       </Button>
                     )
                   })}

@@ -591,6 +591,246 @@ export const investigationScript: ScriptTurn[] = [
   },
 ]
 
+// ---------------- Reports & Digital Logbook ----------------
+
+export interface Report {
+  id: string
+  title: string
+  type: "Investigation Report" | "Weekly Summary" | "Monthly Reliability"
+  generatedBy: "AI Agent" | "System"
+  date: string
+  equipmentIds: string[]
+  summary: string
+  sections: { heading: string; body: string }[]
+}
+
+export const reports: Report[] = [
+  {
+    id: "RPT-2026-014",
+    title: "Investigation Report — Stand 3 DS Work Roll Bearing Degradation",
+    type: "Investigation Report",
+    generatedBy: "AI Agent",
+    date: "2026-06-09",
+    equipmentIds: ["EQ-1002"],
+    summary:
+      "AI-led investigation into rising vibration on Hot Rolling Mill Stand 3. Diagnosis: advanced drive-side bearing wear matching the 2024 failure signature. Planned replacement recommended within 7–10 days.",
+    sections: [
+      {
+        heading: "1. Trigger & Symptoms",
+        body: "Operator query raised on 2026-06-09 regarding high vibration at Stand 3 drive side. Sensor S-04 vibration at 7.8 mm/s (nominal 3.2, threshold 9.0), rising over 21 days. DS bearing temperature S-05 at 86°C (nominal 65°C), also rising.",
+      },
+      {
+        heading: "2. Evidence Reviewed",
+        body: "OEM manual DOC-001 §4.3 (vibration limits): sustained RMS > 7.1 mm/s with temperature > 80°C indicates advanced rolling-element wear. Failure report FA-2024-117: near-identical signature preceded the Sept 2024 bearing seizure (31h downtime). Spares check: SKF 231/600 CA/W33 — 2 units in stock.",
+      },
+      {
+        heading: "3. Diagnosis",
+        body: "Advanced drive-side work roll bearing wear, most likely outer-race / rolling-element fatigue. Regreasing rejected: damage is mechanical, and the 2024 event showed regreasing delayed but did not prevent seizure.",
+      },
+      {
+        heading: "4. Risk Assessment",
+        body: "Risk score 92/100 (CRITICAL). Critical-class equipment, predicted RUL ~18 days, unplanned failure halts the entire hot strip line. Planned replacement ~12h vs 31+ h for a breakdown.",
+      },
+      {
+        heading: "5. Actions Taken",
+        body: "Maintenance plan PLAN-001 created (6 steps, due 2026-06-14, Critical priority). Spares reserved: bearing kit ×1, chock seal set ×1. Follow-up recommendation logged: lubricant contamination analysis on remaining stands.",
+      },
+    ],
+  },
+  {
+    id: "RPT-2026-013",
+    title: "Weekly Maintenance Summary — Week 23, 2026",
+    type: "Weekly Summary",
+    generatedBy: "System",
+    date: "2026-06-07",
+    equipmentIds: ["EQ-1001", "EQ-1002", "EQ-1005", "EQ-1008"],
+    summary:
+      "4 open maintenance actions, 1 completed. Fleet average health 79.3. Two assets under RUL watch: Stand 3 bearing (18 days) and Sinter Fan (62 days).",
+    sections: [
+      {
+        heading: "Fleet Health",
+        body: "8 assets monitored. Average health score 79 (−2 vs last week, driven by Stand 3 bearing degradation). 1 asset degraded, 3 on watch, 4 healthy.",
+      },
+      {
+        heading: "Work Completed",
+        body: "EQ-1008 Cold Mill Tandem Line: scheduled roll change and emulsion filter swap completed 2026-06-05 (5h downtime, R. Sharma). EQ-1004 BOF Converter B: refractory lining laser scan completed 2026-06-01 — estimated 412 heats remaining.",
+      },
+      {
+        heading: "Upcoming Critical Work",
+        body: "PLAN-001 Stand 3 bearing replacement due 2026-06-14 (Critical). PLAN-002 BF#2 stave flushing in progress, circuits 8–11 scheduled for next planned stoppage on 2026-06-18.",
+      },
+      {
+        heading: "Spares & Procurement",
+        body: "All parts for critical work in stock. Watch item: casing liner plate set LP-IDF-09 — only 1 in stock with 30-day lead time; reorder recommended before PLAN-003 execution.",
+      },
+    ],
+  },
+  {
+    id: "RPT-2026-012",
+    title: "Monthly Reliability Report — May 2026",
+    type: "Monthly Reliability",
+    generatedBy: "System",
+    date: "2026-06-01",
+    equipmentIds: ["EQ-1001", "EQ-1003", "EQ-1006"],
+    summary:
+      "Zero unplanned breakdowns in May. Total planned downtime 22h across 4 interventions. Preventive-to-corrective ratio improved to 3:1.",
+    sections: [
+      {
+        heading: "Downtime Analysis",
+        body: "22 hours total planned downtime: BF#2 tuyere inspection (6h), Caster #1 mold inspection (8h), Ladle Crane #4 rope replacement (5h), Crane #4 NDT inspection (3h). Zero unplanned downtime — best month since January.",
+      },
+      {
+        heading: "Predictive Wins",
+        body: "Ladle Crane #4 wire rope replaced at 22% wear index, well ahead of the 40% retirement criterion. BF#2 cooling flow degradation detected at 4.4% deviation — flushing scheduled before stave damage threshold.",
+      },
+      {
+        heading: "Trends to Watch",
+        body: "Stand 3 vibration trending up since mid-May (flagged for investigation). Sinter fan vibration recovering slower than expected after March balancing. Reheating Furnace Zone 2 deviation rising again post nozzle replacement.",
+      },
+    ],
+  },
+]
+
+export type LogCategory = "investigation" | "plan" | "work" | "system" | "knowledge"
+
+export interface LogbookEntry {
+  id: string
+  timestamp: string
+  actor: string
+  actorType: "ai" | "human" | "system"
+  category: LogCategory
+  action: string
+  detail: string
+  equipmentId?: string
+  refId?: string
+}
+
+export const logbook: LogbookEntry[] = [
+  {
+    id: "LOG-041",
+    timestamp: "2026-06-09 14:42",
+    actor: "AI Agent",
+    actorType: "ai",
+    category: "plan",
+    action: "Maintenance plan created",
+    detail: "PLAN-001 'Replace DS work roll bearing — Stand 3' — 6 steps, Critical priority, due 2026-06-14. Spares reserved from inventory.",
+    equipmentId: "EQ-1002",
+    refId: "PLAN-001",
+  },
+  {
+    id: "LOG-040",
+    timestamp: "2026-06-09 14:38",
+    actor: "AI Agent",
+    actorType: "ai",
+    category: "investigation",
+    action: "Investigation completed",
+    detail: "Stand 3 vibration diagnosis: advanced DS bearing wear, risk 92/100. Evidence: sensor trends, manual §4.3, failure report FA-2024-117. Report RPT-2026-014 generated.",
+    equipmentId: "EQ-1002",
+    refId: "RPT-2026-014",
+  },
+  {
+    id: "LOG-039",
+    timestamp: "2026-06-09 14:35",
+    actor: "Shift Engineer",
+    actorType: "human",
+    category: "investigation",
+    action: "Investigation opened",
+    detail: "Query raised: 'Stand 3 of the hot rolling mill is showing high vibration on the drive-side work roll.'",
+    equipmentId: "EQ-1002",
+  },
+  {
+    id: "LOG-038",
+    timestamp: "2026-06-08 09:10",
+    actor: "System",
+    actorType: "system",
+    category: "system",
+    action: "RUL estimate updated",
+    detail: "EQ-1002 remaining useful life revised from 24 to 18 days based on accelerating vibration trend.",
+    equipmentId: "EQ-1002",
+  },
+  {
+    id: "LOG-037",
+    timestamp: "2026-06-07 06:00",
+    actor: "System",
+    actorType: "system",
+    category: "system",
+    action: "Weekly summary generated",
+    detail: "Report RPT-2026-013 'Weekly Maintenance Summary — Week 23' generated and distributed to maintenance leads.",
+    refId: "RPT-2026-013",
+  },
+  {
+    id: "LOG-036",
+    timestamp: "2026-06-06 16:20",
+    actor: "A. Mukherjee",
+    actorType: "human",
+    category: "work",
+    action: "Plan step completed",
+    detail: "PLAN-002 step 2 complete: chemical flushing rig prepared, descaling agent staged at BF#2 platform.",
+    equipmentId: "EQ-1001",
+    refId: "PLAN-002",
+  },
+  {
+    id: "LOG-035",
+    timestamp: "2026-06-05 13:45",
+    actor: "R. Sharma",
+    actorType: "human",
+    category: "work",
+    action: "Work order closed",
+    detail: "EQ-1008 scheduled roll change and emulsion system filter swap completed. Downtime: 5h. Post-work vibration verified at 2.1 mm/s.",
+    equipmentId: "EQ-1008",
+  },
+  {
+    id: "LOG-034",
+    timestamp: "2026-06-04 11:02",
+    actor: "AI Agent",
+    actorType: "ai",
+    category: "knowledge",
+    action: "Document indexed",
+    detail: "OEM Bulletin PB-2025-09 (AGC servo valve advisory) re-indexed after revision. 6 pages, 14 chunks embedded.",
+    refId: "DOC-006",
+  },
+  {
+    id: "LOG-033",
+    timestamp: "2026-06-03 08:15",
+    actor: "V. Singh",
+    actorType: "human",
+    category: "work",
+    action: "Inspection logged",
+    detail: "BOF Converter B refractory laser scan complete — 412 heats remaining estimate. No action required before September campaign.",
+    equipmentId: "EQ-1004",
+  },
+  {
+    id: "LOG-032",
+    timestamp: "2026-06-02 10:30",
+    actor: "System",
+    actorType: "system",
+    category: "system",
+    action: "Sensor anomaly flagged",
+    detail: "EQ-1002 S-04 vibration crossed 6.5 mm/s watch threshold (FA-2024-117 recommendation). Asset status escalated to Degraded.",
+    equipmentId: "EQ-1002",
+  },
+  {
+    id: "LOG-031",
+    timestamp: "2026-06-01 06:00",
+    actor: "System",
+    actorType: "system",
+    category: "system",
+    action: "Monthly report generated",
+    detail: "Report RPT-2026-012 'Monthly Reliability Report — May 2026' generated. Zero unplanned breakdowns recorded.",
+    refId: "RPT-2026-012",
+  },
+  {
+    id: "LOG-030",
+    timestamp: "2026-05-28 15:50",
+    actor: "S. Patel",
+    actorType: "human",
+    category: "work",
+    action: "Work order closed",
+    detail: "Caster #1 mold copper plate inspection and segment roll alignment completed. Downtime: 8h.",
+    equipmentId: "EQ-1003",
+  },
+]
+
 // ---------------- Dashboard aggregates ----------------
 
 export const kpis = {
