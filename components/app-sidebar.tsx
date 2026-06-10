@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
@@ -10,6 +11,7 @@ import {
   BookOpen,
   Factory,
   FileText,
+  Loader2,
 } from "lucide-react"
 import {
   Sidebar,
@@ -35,6 +37,12 @@ const navItems = [
 
 export function AppSidebar() {
   const pathname = usePathname()
+  const [pendingHref, setPendingHref] = useState<string | null>(null)
+
+  // Clear the pending indicator once the route has actually changed
+  useEffect(() => {
+    setPendingHref(null)
+  }, [pathname])
 
   return (
     <Sidebar>
@@ -63,14 +71,28 @@ export function AppSidebar() {
                   item.href === "/"
                     ? pathname === "/"
                     : pathname.startsWith(item.href)
+                const pending = pendingHref === item.href && !active
                 return (
                   <SidebarMenuItem key={item.href}>
                     <SidebarMenuButton
-                      render={<Link href={item.href} />}
+                      render={
+                        <Link
+                          href={item.href}
+                          onClick={() => {
+                            if (!active) setPendingHref(item.href)
+                          }}
+                        />
+                      }
                       isActive={active}
                     >
                       <item.icon />
                       <span>{item.title}</span>
+                      {pending && (
+                        <Loader2
+                          className="ml-auto size-3.5 animate-spin text-sidebar-foreground/60"
+                          aria-label="Loading page"
+                        />
+                      )}
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 )

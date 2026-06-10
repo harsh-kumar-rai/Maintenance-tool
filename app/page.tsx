@@ -4,6 +4,7 @@ import {
   ArrowRight,
   ClipboardList,
   Gauge,
+  Sparkles,
   TriangleAlert,
 } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
@@ -61,7 +62,17 @@ export default function DashboardPage() {
       <PageHeader
         title="Plant Overview"
         description="Fleet health, failure predictions and maintenance priorities"
-      />
+      >
+        <Button
+          render={<Link href="/investigation" />}
+          nativeButton={false}
+          size="sm"
+        >
+          <Sparkles data-icon="inline-start" />
+          <span className="hidden sm:inline">AI Investigation</span>
+          <span className="sm:hidden">Investigate</span>
+        </Button>
+      </PageHeader>
       <main className="flex flex-1 flex-col gap-6 p-4 md:p-6">
         {/* KPI cards */}
         <section
