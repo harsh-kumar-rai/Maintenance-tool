@@ -98,6 +98,7 @@ export default function DashboardPage() {
               </div>
               <Button
                 render={<Link href="/equipment" />}
+                nativeButton={false}
                 variant="ghost"
                 size="sm"
               >
@@ -153,6 +154,7 @@ export default function DashboardPage() {
               </div>
               <Button
                 render={<Link href="/planner" />}
+                nativeButton={false}
                 variant="ghost"
                 size="sm"
               >

@@ -197,6 +197,7 @@ function ReportsTab() {
                 <Button
                   key={id}
                   render={<Link href={`/equipment/${id}`} />}
+                  nativeButton={false}
                   variant="outline"
                   size="sm"
                   className="h-7 font-mono text-xs"
