@@ -128,13 +128,19 @@ export default function DashboardPage() {
                             {eq.id} · {eq.area}
                           </span>
                         </div>
-                        <div className="hidden w-28 sm:block">
-                          <Progress value={eq.healthScore} className="h-1.5" />
+                        <div className="hidden w-28 shrink-0 sm:block">
+                          <Progress
+                            value={eq.healthScore}
+                            className="h-1.5 [&_[data-slot=progress-track]]:h-1.5 [&_[data-slot=progress-track]]:bg-muted-foreground/20"
+                          />
                         </div>
-                        <span className="w-10 text-right font-mono text-sm font-medium">
+                        <span className="w-10 shrink-0 text-right font-mono text-sm font-medium">
                           {eq.healthScore}%
                         </span>
-                        <Badge variant="outline" className={cfg.badge}>
+                        <Badge
+                          variant="outline"
+                          className={`${cfg.badge} w-[4.75rem] shrink-0 justify-center`}
+                        >
                           {cfg.label}
                         </Badge>
                       </Link>
