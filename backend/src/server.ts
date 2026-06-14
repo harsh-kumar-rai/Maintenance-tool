@@ -1,4 +1,5 @@
 import { dirname, resolve } from "node:path"
+import { existsSync, readdirSync, readFileSync } from "node:fs"
 import { fileURLToPath } from "node:url"
 import cors from "cors"
 import { config } from "dotenv"
@@ -251,6 +252,47 @@ app.use(
   },
 )
 
-app.listen(port, () => {
-  console.log(`Maintenance Wizard backend listening on http://localhost:${port}`)
+async function autoSeed() {
+  try {
+    const store = await loadStore()
+    if (store.equipment.length > 0) return // already has data
+
+    const backendRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..")
+    const dataDir = resolve(backendRoot, "../data")
+    if (!existsSync(dataDir)) return
+
+    console.log("Store is empty, auto-seeding from data/ folder...")
+
+    // Ingest CSVs
+    const csvFiles = ["assets.csv", "sensor_data.csv", "maintenance_history.csv", "failure_reports.csv", "spare_inventory.csv"]
+    for (const name of csvFiles) {
+      const filePath = resolve(dataDir, name)
+      if (!existsSync(filePath)) continue
+      const buffer = readFileSync(filePath)
+      await ingestFile({ originalname: name, mimetype: "text/csv", buffer } as any)
+      console.log(`  Seeded ${name}`)
+    }
+
+    // Ingest PDFs from SOPs and manuals
+    for (const sub of ["SOPs", "manuals"]) {
+      const subDir = resolve(dataDir, sub)
+      if (!existsSync(subDir)) continue
+      for (const name of readdirSync(subDir).filter(f => f.endsWith(".pdf"))) {
+        const buffer = readFileSync(resolve(subDir, name))
+        await ingestFile({ originalname: name, mimetype: "application/pdf", buffer } as any)
+      }
+      console.log(`  Seeded ${sub}/`)
+    }
+
+    const summary = await getInputSummary()
+    console.log(`Auto-seed complete: ${summary.equipment} equipment, ${summary.sensors} sensors, ${summary.documents} documents`)
+  } catch (err) {
+    console.error("Auto-seed failed (non-fatal):", err)
+  }
+}
+
+autoSeed().then(() => {
+  app.listen(port, () => {
+    console.log(`Maintenance Wizard backend listening on http://localhost:${port}`)
+  })
 })
