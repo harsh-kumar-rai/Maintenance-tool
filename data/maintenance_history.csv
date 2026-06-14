@@ -1,0 +1,243 @@
+record_id,asset_id,date,issue,root_cause,action_taken,downtime_hours
+REC-00001,AST-101,2025-03-19,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.9
+REC-00002,AST-101,2025-04-24,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.5
+REC-00003,AST-101,2025-07-03,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.2
+REC-00004,AST-101,2025-08-07,Condition-based maintenance,Misalignment,Inspection and repair completed,3.6
+REC-00005,AST-101,2025-11-19,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,8.4
+REC-00006,AST-102,2025-01-31,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,3.4
+REC-00007,AST-102,2025-04-04,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.9
+REC-00008,AST-102,2025-05-19,Condition-based maintenance,Bearing Wear,Inspection and repair completed,5.5
+REC-00009,AST-102,2025-06-18,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.5
+REC-00010,AST-102,2025-07-25,Condition-based maintenance,Misalignment,Inspection and repair completed,4.8
+REC-00011,AST-102,2025-10-15,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,8.2
+REC-00012,AST-102,2025-12-25,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.7
+REC-00013,AST-103,2025-03-12,Condition-based maintenance,Misalignment,Inspection and repair completed,7.9
+REC-00014,AST-103,2025-04-26,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.5
+REC-00015,AST-103,2025-07-14,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.0
+REC-00016,AST-103,2025-08-11,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.1
+REC-00017,AST-103,2025-10-20,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,7.4
+REC-00018,AST-104,2025-02-06,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,5.9
+REC-00019,AST-104,2025-04-08,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,11.8
+REC-00020,AST-104,2025-05-18,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.7
+REC-00021,AST-104,2025-06-14,Condition-based maintenance,Misalignment,Inspection and repair completed,5.2
+REC-00022,AST-104,2025-10-11,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,10.1
+REC-00023,AST-104,2025-12-05,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.4
+REC-00024,AST-105,2025-02-05,Condition-based maintenance,Bearing Wear,Inspection and repair completed,8.3
+REC-00025,AST-105,2025-03-15,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.0
+REC-00026,AST-105,2025-05-20,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,7.1
+REC-00027,AST-105,2025-06-27,Condition-based maintenance,Misalignment,Inspection and repair completed,10.8
+REC-00028,AST-105,2025-08-31,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.2
+REC-00029,AST-106,2025-03-04,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,10.4
+REC-00030,AST-106,2025-04-03,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,10.3
+REC-00031,AST-106,2025-06-08,Condition-based maintenance,Motor Overheating,Inspection and repair completed,10.0
+REC-00032,AST-106,2025-08-27,Condition-based maintenance,Bearing Wear,Inspection and repair completed,8.3
+REC-00033,AST-106,2025-10-26,Condition-based maintenance,Motor Overheating,Inspection and repair completed,4.2
+REC-00034,AST-107,2025-02-26,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.3
+REC-00035,AST-107,2025-05-01,Condition-based maintenance,Misalignment,Inspection and repair completed,2.1
+REC-00036,AST-107,2025-06-04,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.9
+REC-00037,AST-107,2025-07-12,Condition-based maintenance,Motor Overheating,Inspection and repair completed,8.9
+REC-00038,AST-107,2025-09-16,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.9
+REC-00039,AST-107,2025-11-10,Condition-based maintenance,Motor Overheating,Inspection and repair completed,8.9
+REC-00040,AST-108,2025-02-27,Condition-based maintenance,Misalignment,Inspection and repair completed,7.3
+REC-00041,AST-108,2025-05-06,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.1
+REC-00042,AST-108,2025-06-30,Condition-based maintenance,Motor Overheating,Inspection and repair completed,4.3
+REC-00043,AST-108,2025-08-11,Condition-based maintenance,Bearing Wear,Inspection and repair completed,6.9
+REC-00044,AST-108,2025-11-23,Condition-based maintenance,Bearing Wear,Inspection and repair completed,7.2
+REC-00045,AST-108,2025-12-18,Condition-based maintenance,Motor Overheating,Inspection and repair completed,4.7
+REC-00046,AST-109,2025-04-05,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,8.3
+REC-00047,AST-109,2025-06-16,Condition-based maintenance,Bearing Wear,Inspection and repair completed,8.0
+REC-00048,AST-109,2025-08-20,Condition-based maintenance,Misalignment,Inspection and repair completed,6.6
+REC-00049,AST-109,2025-10-07,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.8
+REC-00050,AST-110,2025-06-24,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.9
+REC-00051,AST-110,2025-11-10,Condition-based maintenance,Motor Overheating,Inspection and repair completed,10.1
+REC-00052,AST-111,2025-03-15,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.8
+REC-00053,AST-111,2025-08-07,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,2.5
+REC-00054,AST-111,2025-11-15,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.0
+REC-00055,AST-112,2025-02-08,Condition-based maintenance,Motor Overheating,Inspection and repair completed,4.2
+REC-00056,AST-112,2025-04-05,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00057,AST-112,2025-07-11,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.9
+REC-00058,AST-112,2025-08-02,Condition-based maintenance,Motor Overheating,Inspection and repair completed,10.3
+REC-00059,AST-112,2025-12-16,Condition-based maintenance,Bearing Wear,Inspection and repair completed,10.5
+REC-00060,AST-113,2025-01-29,Condition-based maintenance,Misalignment,Inspection and repair completed,4.8
+REC-00061,AST-113,2025-02-28,Condition-based maintenance,Misalignment,Inspection and repair completed,4.6
+REC-00062,AST-113,2025-06-01,Condition-based maintenance,Motor Overheating,Inspection and repair completed,2.2
+REC-00063,AST-113,2025-08-08,Condition-based maintenance,Misalignment,Inspection and repair completed,4.2
+REC-00064,AST-113,2025-09-08,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,8.8
+REC-00065,AST-113,2025-12-13,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,9.1
+REC-00066,AST-114,2025-02-08,Condition-based maintenance,Misalignment,Inspection and repair completed,10.8
+REC-00067,AST-114,2025-02-27,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.6
+REC-00068,AST-114,2025-08-19,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,8.4
+REC-00069,AST-114,2025-11-06,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.0
+REC-00070,AST-114,2025-11-30,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,5.3
+REC-00071,AST-114,2025-12-25,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.7
+REC-00072,AST-115,2025-03-14,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.8
+REC-00073,AST-115,2025-05-06,Condition-based maintenance,Bearing Wear,Inspection and repair completed,6.5
+REC-00074,AST-115,2025-09-08,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.8
+REC-00075,AST-116,2025-01-24,Condition-based maintenance,Bearing Wear,Inspection and repair completed,4.8
+REC-00076,AST-116,2025-03-17,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.2
+REC-00077,AST-116,2025-04-08,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.6
+REC-00078,AST-116,2025-06-10,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,11.1
+REC-00079,AST-116,2025-07-25,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00080,AST-116,2025-09-18,Condition-based maintenance,Misalignment,Inspection and repair completed,10.8
+REC-00081,AST-116,2025-11-29,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,9.4
+REC-00082,AST-117,2025-03-09,Condition-based maintenance,Motor Overheating,Inspection and repair completed,9.4
+REC-00083,AST-117,2025-08-18,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.5
+REC-00084,AST-117,2025-10-19,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,9.8
+REC-00085,AST-118,2025-05-29,Condition-based maintenance,Motor Overheating,Inspection and repair completed,2.1
+REC-00086,AST-118,2025-06-20,Condition-based maintenance,Misalignment,Inspection and repair completed,11.3
+REC-00087,AST-118,2025-07-13,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.3
+REC-00088,AST-118,2025-11-13,Condition-based maintenance,Misalignment,Inspection and repair completed,11.6
+REC-00089,AST-118,2025-12-18,Condition-based maintenance,Motor Overheating,Inspection and repair completed,8.9
+REC-00090,AST-119,2025-02-22,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.1
+REC-00091,AST-119,2025-07-05,Condition-based maintenance,Bearing Wear,Inspection and repair completed,4.6
+REC-00092,AST-119,2025-10-23,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.3
+REC-00093,AST-119,2025-12-15,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.2
+REC-00094,AST-120,2025-04-10,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.7
+REC-00095,AST-120,2025-07-01,Condition-based maintenance,Bearing Wear,Inspection and repair completed,6.0
+REC-00096,AST-120,2025-09-26,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.6
+REC-00097,AST-120,2025-12-21,Condition-based maintenance,Misalignment,Inspection and repair completed,6.2
+REC-00098,AST-121,2025-05-01,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.4
+REC-00099,AST-121,2025-07-17,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,7.2
+REC-00100,AST-121,2025-10-21,Condition-based maintenance,Misalignment,Inspection and repair completed,10.6
+REC-00101,AST-121,2025-12-04,Condition-based maintenance,Misalignment,Inspection and repair completed,2.2
+REC-00102,AST-122,2025-04-23,Condition-based maintenance,Bearing Wear,Inspection and repair completed,8.0
+REC-00103,AST-122,2025-11-04,Condition-based maintenance,Motor Overheating,Inspection and repair completed,2.2
+REC-00104,AST-123,2025-02-28,Condition-based maintenance,Motor Overheating,Inspection and repair completed,6.3
+REC-00105,AST-123,2025-05-30,Condition-based maintenance,Motor Overheating,Inspection and repair completed,9.4
+REC-00106,AST-123,2025-09-06,Condition-based maintenance,Misalignment,Inspection and repair completed,11.9
+REC-00107,AST-123,2025-12-10,Condition-based maintenance,Bearing Wear,Inspection and repair completed,11.9
+REC-00108,AST-124,2025-01-24,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00109,AST-124,2025-03-05,Condition-based maintenance,Bearing Wear,Inspection and repair completed,6.7
+REC-00110,AST-124,2025-04-26,Condition-based maintenance,Misalignment,Inspection and repair completed,11.9
+REC-00111,AST-124,2025-05-20,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.6
+REC-00112,AST-124,2025-08-23,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.1
+REC-00113,AST-124,2025-10-02,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.5
+REC-00114,AST-124,2025-12-22,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.3
+REC-00115,AST-125,2025-01-31,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.5
+REC-00116,AST-125,2025-04-07,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00117,AST-125,2025-05-06,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.2
+REC-00118,AST-125,2025-07-29,Condition-based maintenance,Bearing Wear,Inspection and repair completed,2.4
+REC-00119,AST-125,2025-09-10,Condition-based maintenance,Bearing Wear,Inspection and repair completed,5.7
+REC-00120,AST-126,2025-02-09,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.3
+REC-00121,AST-126,2025-07-12,Condition-based maintenance,Bearing Wear,Inspection and repair completed,4.9
+REC-00122,AST-126,2025-08-26,Condition-based maintenance,Bearing Wear,Inspection and repair completed,2.2
+REC-00123,AST-126,2025-11-09,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.3
+REC-00124,AST-126,2025-12-19,Condition-based maintenance,Motor Overheating,Inspection and repair completed,6.7
+REC-00125,AST-127,2025-02-26,Condition-based maintenance,Misalignment,Inspection and repair completed,8.9
+REC-00126,AST-127,2025-04-09,Condition-based maintenance,Motor Overheating,Inspection and repair completed,6.1
+REC-00127,AST-127,2025-06-28,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,7.2
+REC-00128,AST-127,2025-12-13,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.1
+REC-00129,AST-128,2025-03-16,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.9
+REC-00130,AST-128,2025-07-06,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,10.0
+REC-00131,AST-128,2025-09-12,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.4
+REC-00132,AST-128,2025-12-07,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,11.2
+REC-00133,AST-129,2025-01-29,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.1
+REC-00134,AST-129,2025-03-19,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.7
+REC-00135,AST-129,2025-07-04,Condition-based maintenance,Misalignment,Inspection and repair completed,2.1
+REC-00136,AST-129,2025-08-02,Condition-based maintenance,Misalignment,Inspection and repair completed,5.9
+REC-00137,AST-129,2025-09-20,Condition-based maintenance,Misalignment,Inspection and repair completed,6.4
+REC-00138,AST-129,2025-11-05,Condition-based maintenance,Bearing Wear,Inspection and repair completed,4.1
+REC-00139,AST-129,2025-12-09,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.5
+REC-00140,AST-130,2025-02-11,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.2
+REC-00141,AST-130,2025-03-31,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,9.6
+REC-00142,AST-130,2025-05-01,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,7.5
+REC-00143,AST-130,2025-05-31,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,7.2
+REC-00144,AST-131,2025-02-01,Condition-based maintenance,Bearing Wear,Inspection and repair completed,8.3
+REC-00145,AST-131,2025-03-30,Condition-based maintenance,Misalignment,Inspection and repair completed,8.0
+REC-00146,AST-131,2025-05-15,Condition-based maintenance,Bearing Wear,Inspection and repair completed,7.6
+REC-00147,AST-131,2025-10-20,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,6.4
+REC-00148,AST-131,2025-12-08,Condition-based maintenance,Bearing Wear,Inspection and repair completed,10.7
+REC-00149,AST-132,2025-02-14,Condition-based maintenance,Bearing Wear,Inspection and repair completed,5.2
+REC-00150,AST-132,2025-03-30,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,7.1
+REC-00151,AST-132,2025-07-15,Condition-based maintenance,Bearing Wear,Inspection and repair completed,11.1
+REC-00152,AST-132,2025-09-27,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00153,AST-132,2025-12-05,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.0
+REC-00154,AST-133,2025-02-10,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.6
+REC-00155,AST-133,2025-03-15,Condition-based maintenance,Motor Overheating,Inspection and repair completed,4.0
+REC-00156,AST-133,2025-05-03,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.5
+REC-00157,AST-133,2025-08-25,Condition-based maintenance,Bearing Wear,Inspection and repair completed,3.5
+REC-00158,AST-134,2025-04-06,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,11.1
+REC-00159,AST-134,2025-05-20,Condition-based maintenance,Misalignment,Inspection and repair completed,7.3
+REC-00160,AST-134,2025-06-10,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.8
+REC-00161,AST-134,2025-07-24,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.7
+REC-00162,AST-134,2025-08-16,Condition-based maintenance,Misalignment,Inspection and repair completed,11.7
+REC-00163,AST-134,2025-09-10,Condition-based maintenance,Misalignment,Inspection and repair completed,6.0
+REC-00164,AST-134,2025-11-09,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,9.4
+REC-00165,AST-134,2025-12-19,Condition-based maintenance,Misalignment,Inspection and repair completed,11.8
+REC-00166,AST-135,2025-02-05,Condition-based maintenance,Misalignment,Inspection and repair completed,7.7
+REC-00167,AST-135,2025-03-04,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,6.2
+REC-00168,AST-135,2025-04-19,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.4
+REC-00169,AST-135,2025-07-03,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.5
+REC-00170,AST-135,2025-08-16,Condition-based maintenance,Motor Overheating,Inspection and repair completed,6.1
+REC-00171,AST-135,2025-09-23,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.7
+REC-00172,AST-135,2025-10-29,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.5
+REC-00173,AST-135,2025-11-22,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,6.4
+REC-00174,AST-136,2025-01-27,Condition-based maintenance,Bearing Wear,Inspection and repair completed,11.2
+REC-00175,AST-136,2025-07-04,Condition-based maintenance,Motor Overheating,Inspection and repair completed,5.9
+REC-00176,AST-136,2025-08-19,Condition-based maintenance,Misalignment,Inspection and repair completed,8.7
+REC-00177,AST-136,2025-09-25,Condition-based maintenance,Motor Overheating,Inspection and repair completed,10.0
+REC-00178,AST-136,2025-10-28,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,8.8
+REC-00179,AST-136,2025-11-19,Condition-based maintenance,Bearing Wear,Inspection and repair completed,5.3
+REC-00180,AST-137,2025-04-11,Condition-based maintenance,Motor Overheating,Inspection and repair completed,2.9
+REC-00181,AST-137,2025-06-13,Condition-based maintenance,Misalignment,Inspection and repair completed,9.7
+REC-00182,AST-137,2025-09-22,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.0
+REC-00183,AST-138,2025-03-04,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,7.8
+REC-00184,AST-138,2025-03-31,Condition-based maintenance,Misalignment,Inspection and repair completed,4.1
+REC-00185,AST-138,2025-06-29,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.1
+REC-00186,AST-138,2025-08-08,Condition-based maintenance,Misalignment,Inspection and repair completed,4.7
+REC-00187,AST-138,2025-12-25,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.8
+REC-00188,AST-139,2025-01-26,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,4.3
+REC-00189,AST-139,2025-02-25,Condition-based maintenance,Motor Overheating,Inspection and repair completed,6.8
+REC-00190,AST-139,2025-07-30,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.2
+REC-00191,AST-139,2025-09-18,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,8.7
+REC-00192,AST-139,2025-11-26,Condition-based maintenance,Misalignment,Inspection and repair completed,7.1
+REC-00193,AST-140,2025-09-03,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,7.7
+REC-00194,AST-141,2025-07-01,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,7.2
+REC-00195,AST-141,2025-11-06,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.9
+REC-00196,AST-141,2025-12-17,Condition-based maintenance,Misalignment,Inspection and repair completed,5.2
+REC-00197,AST-142,2025-02-19,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.5
+REC-00198,AST-142,2025-06-23,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.1
+REC-00199,AST-142,2025-09-03,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,10.4
+REC-00200,AST-143,2025-05-05,Condition-based maintenance,Misalignment,Inspection and repair completed,11.2
+REC-00201,AST-143,2025-06-24,Condition-based maintenance,Motor Overheating,Inspection and repair completed,9.6
+REC-00202,AST-143,2025-08-06,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,11.3
+REC-00203,AST-143,2025-09-11,Condition-based maintenance,Bearing Wear,Inspection and repair completed,7.9
+REC-00204,AST-143,2025-11-14,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,11.3
+REC-00205,AST-144,2025-03-16,Condition-based maintenance,Motor Overheating,Inspection and repair completed,10.2
+REC-00206,AST-144,2025-07-22,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,5.0
+REC-00207,AST-145,2025-02-03,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,11.7
+REC-00208,AST-145,2025-03-25,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.6
+REC-00209,AST-145,2025-06-24,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,9.6
+REC-00210,AST-145,2025-07-20,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,4.0
+REC-00211,AST-145,2025-08-26,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.7
+REC-00212,AST-145,2025-10-07,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,4.7
+REC-00213,AST-145,2025-12-11,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.8
+REC-00214,AST-146,2025-03-01,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,6.0
+REC-00215,AST-146,2025-04-28,Condition-based maintenance,Misalignment,Inspection and repair completed,11.2
+REC-00216,AST-146,2025-05-28,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,2.7
+REC-00217,AST-146,2025-06-23,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,11.3
+REC-00218,AST-146,2025-09-17,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,4.2
+REC-00219,AST-146,2025-11-24,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.5
+REC-00220,AST-147,2025-01-31,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,5.3
+REC-00221,AST-147,2025-03-10,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,11.6
+REC-00222,AST-147,2025-04-13,Condition-based maintenance,Bearing Wear,Inspection and repair completed,10.7
+REC-00223,AST-147,2025-07-02,Condition-based maintenance,Bearing Wear,Inspection and repair completed,6.0
+REC-00224,AST-147,2025-08-10,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,2.1
+REC-00225,AST-147,2025-09-08,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,4.9
+REC-00226,AST-147,2025-10-14,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.2
+REC-00227,AST-148,2025-01-20,Condition-based maintenance,Bearing Wear,Inspection and repair completed,9.6
+REC-00228,AST-148,2025-03-07,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.2
+REC-00229,AST-148,2025-04-13,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,5.2
+REC-00230,AST-148,2025-06-29,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,5.3
+REC-00231,AST-148,2025-12-07,Condition-based maintenance,Motor Overheating,Inspection and repair completed,3.5
+REC-00232,AST-148,2025-12-28,Condition-based maintenance,Misalignment,Inspection and repair completed,9.5
+REC-00233,AST-149,2025-04-14,Condition-based maintenance,Misalignment,Inspection and repair completed,3.1
+REC-00234,AST-149,2025-06-06,Condition-based maintenance,Bearing Wear,Inspection and repair completed,4.6
+REC-00235,AST-149,2025-06-28,Condition-based maintenance,Cooling System Failure,Inspection and repair completed,3.1
+REC-00236,AST-149,2025-08-10,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,2.5
+REC-00237,AST-149,2025-09-05,Condition-based maintenance,Motor Overheating,Inspection and repair completed,11.6
+REC-00238,AST-150,2025-02-12,Condition-based maintenance,Motor Overheating,Inspection and repair completed,7.0
+REC-00239,AST-150,2025-05-10,Condition-based maintenance,Motor Overheating,Inspection and repair completed,8.8
+REC-00240,AST-150,2025-07-16,Condition-based maintenance,Misalignment,Inspection and repair completed,6.0
+REC-00241,AST-150,2025-08-14,Condition-based maintenance,Bearing Wear,Inspection and repair completed,7.6
+REC-00242,AST-150,2025-12-08,Condition-based maintenance,Lubrication Failure,Inspection and repair completed,10.9

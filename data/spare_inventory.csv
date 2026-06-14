@@ -1,0 +1,21 @@
+part_id,part_name,equipment_type,quantity,minimum_stock,lead_time_days,supplier,cost
+PRT-001,SKF 6314 Deep Groove Bearing,Cooling Pump,4,6,5,SKF Industrial,245.00
+PRT-002,Mechanical Seal 45mm,Cooling Pump,2,4,14,Flowserve,850.00
+PRT-003,Polyurethane Coupling Insert,Exhaust Fan,12,10,2,Rexnord,45.00
+PRT-004,100HP Induction Motor,Compressor,1,1,45,ABB,8500.00
+PRT-005,Oscillator Leaf Spring,Continuous Caster,0,2,30,Danieli Parts,3200.00
+PRT-006,Blast Furnace Tuyere,Blast Furnace,8,12,60,Primetals,4500.00
+PRT-007,Crane Hoist Wire Rope 22mm,Crane,2,2,7,Konecranes,1200.00
+PRT-008,Intercooler Tube Bundle,Compressor,0,1,90,Atlas Copco,12500.00
+PRT-009,Ladle Slide Gate Refractory,Ladle Furnace,25,20,15,Vesuvius,150.00
+PRT-010,Vibration Sensor (Accelerometer),All,5,10,3,Bently Nevada,350.00
+PRT-011,High-Temp Lithium Grease (20kg),All,15,10,2,Mobil,180.00
+PRT-012,Pinion Gearbox Input Shaft,Rolling Mill,0,1,120,SMS Group,25000.00
+PRT-013,Cooling Tower Fan Blade Set,Cooling Pump,1,1,21,Howden,4100.00
+PRT-014,Mould Copper Tube,Continuous Caster,4,4,45,KME,6500.00
+PRT-015,Pneumatic Control Valve 4-inch,Utilities,3,2,10,Fisher,1800.00
+PRT-016,PT100 Temperature Probe,All,18,15,2,Endress+Hauser,85.00
+PRT-017,Hydraulic Cylinder Seal Kit,Rolling Mill,6,5,5,Parker,120.00
+PRT-018,Variable Frequency Drive 50kW,Exhaust Fan,1,1,14,Siemens,4200.00
+PRT-019,Laser Alignment Shim Kit,All,4,2,1,SKF Industrial,350.00
+PRT-020,Descaling Spray Nozzle,Rolling Mill,40,50,7,Spraying Systems,45.00

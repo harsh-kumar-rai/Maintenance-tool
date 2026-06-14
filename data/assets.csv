@@ -1,0 +1,51 @@
+asset_id,asset_name,equipment_type,plant_area,criticality,manufacturer,installation_year
+AST-101,Blast Furnace 1,Blast Furnace,Ironmaking,Critical,Primetals,2010
+AST-102,Blast Furnace 2,Blast Furnace,Ironmaking,Critical,Primetals,2015
+AST-103,BOF Converter A,BOF Converter,Steelmaking,Critical,SMS Group,2012
+AST-104,BOF Converter B,BOF Converter,Steelmaking,Critical,SMS Group,2012
+AST-105,Caster Line 1,Continuous Caster,Casting,Critical,Danieli,2018
+AST-106,Caster Line 2,Continuous Caster,Casting,Critical,Danieli,2018
+AST-107,Hot Strip Mill,Rolling Mill,Rolling,Critical,SMS Group,2014
+AST-108,Cold Rolling Mill,Rolling Mill,Rolling,High,Primetals,2016
+AST-109,Ladle Furnace 1,Ladle Furnace,Secondary Metallurgy,High,Tenova,2015
+AST-110,Ladle Furnace 2,Ladle Furnace,Secondary Metallurgy,High,Tenova,2017
+AST-111,Primary Cooling Pump A,Cooling Pump,Ironmaking,High,Flowserve,2019
+AST-112,Primary Cooling Pump B,Cooling Pump,Ironmaking,High,Flowserve,2019
+AST-113,Caster Cooling Pump 1,Cooling Pump,Casting,Critical,Sulzer,2020
+AST-114,Caster Cooling Pump 2,Cooling Pump,Casting,Critical,Sulzer,2020
+AST-115,Mill Cooling Pump A,Cooling Pump,Rolling,Medium,KSB,2016
+AST-116,Mill Cooling Pump B,Cooling Pump,Rolling,Medium,KSB,2016
+AST-117,Furnace Exhaust Fan 1,Exhaust Fan,Ironmaking,High,Howden,2013
+AST-118,Furnace Exhaust Fan 2,Exhaust Fan,Ironmaking,High,Howden,2013
+AST-119,BOF Exhaust Fan A,Exhaust Fan,Steelmaking,High,TLT-Turbo,2015
+AST-120,Mill Exhaust Fan 1,Exhaust Fan,Rolling,Medium,Howden,2016
+AST-121,Main Air Compressor 1,Compressor,Utilities,High,Atlas Copco,2021
+AST-122,Main Air Compressor 2,Compressor,Utilities,High,Atlas Copco,2021
+AST-123,Instrument Air Compressor A,Compressor,Utilities,Medium,Ingersoll Rand,2018
+AST-124,Instrument Air Compressor B,Compressor,Utilities,Medium,Ingersoll Rand,2018
+AST-125,Ladle Crane 1,Crane,Steelmaking,Critical,Konecranes,2012
+AST-126,Ladle Crane 2,Crane,Steelmaking,Critical,Konecranes,2014
+AST-127,Scrap Yard Crane A,Crane,Raw Materials,Medium,Demag,2010
+AST-128,Coil Handling Crane 1,Crane,Rolling,High,Konecranes,2016
+AST-129,Coil Handling Crane 2,Crane,Rolling,High,Konecranes,2018
+AST-130,Blast Furnace 3,Blast Furnace,Ironmaking,Critical,Primetals,2022
+AST-131,BOF Converter C,BOF Converter,Steelmaking,Critical,SMS Group,2020
+AST-132,Caster Line 3,Continuous Caster,Casting,Critical,Danieli,2021
+AST-133,Bar Mill,Rolling Mill,Rolling,High,SMS Group,2011
+AST-134,Wire Rod Mill,Rolling Mill,Rolling,High,Primetals,2013
+AST-135,Ladle Furnace 3,Ladle Furnace,Secondary Metallurgy,High,Tenova,2020
+AST-136,Secondary Cooling Pump A,Cooling Pump,Ironmaking,Medium,Flowserve,2019
+AST-137,Secondary Cooling Pump B,Cooling Pump,Ironmaking,Medium,Flowserve,2019
+AST-138,Caster Cooling Pump 3,Cooling Pump,Casting,Critical,Sulzer,2021
+AST-139,Caster Cooling Pump 4,Cooling Pump,Casting,Critical,Sulzer,2021
+AST-140,Mill Cooling Pump C,Cooling Pump,Rolling,Medium,KSB,2016
+AST-141,Furnace Exhaust Fan 3,Exhaust Fan,Ironmaking,High,Howden,2022
+AST-142,BOF Exhaust Fan B,Exhaust Fan,Steelmaking,High,TLT-Turbo,2020
+AST-143,Main Air Compressor 3,Compressor,Utilities,High,Atlas Copco,2022
+AST-144,Instrument Air Compressor C,Compressor,Utilities,Medium,Ingersoll Rand,2019
+AST-145,Ladle Crane 3,Crane,Steelmaking,Critical,Konecranes,2020
+AST-146,Scrap Yard Crane B,Crane,Raw Materials,Medium,Demag,2012
+AST-147,Coil Handling Crane 3,Crane,Rolling,High,Konecranes,2021
+AST-148,Descaling Pump 1,Cooling Pump,Rolling,Critical,Ruhrpumpen,2015
+AST-149,Descaling Pump 2,Cooling Pump,Rolling,Critical,Ruhrpumpen,2017
+AST-150,Slab Yard Crane 1,Crane,Casting,High,Konecranes,2018
