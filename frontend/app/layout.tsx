@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { SidebarProvider, SidebarInset } from '@/components/ui/sidebar'
 import { AppSidebar } from '@/components/app-sidebar'
 import { RouteWarmer } from '@/components/route-warmer'
+import { ColdStartBanner } from '@/components/cold-start-banner'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({
           <SidebarInset>{children}</SidebarInset>
         </SidebarProvider>
         <RouteWarmer />
+        <ColdStartBanner />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
