@@ -4,20 +4,6 @@ AI-powered maintenance assistant for steel plant operations. Upload real plant d
 
 Built for the Agentic AI Hackathon (Round 2).
 
-## Screenshots
-
-### Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
-
-### AI Investigation
-![AI Investigation](docs/screenshots/investigation.png)
-
-### Failure Predictions
-![Failure Predictions](docs/screenshots/predictions.png)
-
-### Knowledge Base
-![Knowledge Base](docs/screenshots/knowledge.png)
-
 ## Tech Stack
 
 - **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Shadcn UI, Recharts
