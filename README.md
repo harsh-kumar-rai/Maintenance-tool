@@ -2,8 +2,6 @@
 
 AI-powered maintenance assistant for steel plant operations. Upload real plant data (CSVs, PDFs, manuals), get sensor-driven alerts, failure predictions, root cause analysis, and actionable maintenance plans -- all backed by LLM contextual reasoning.
 
-Built for the Agentic AI Hackathon (Round 2).
-
 ## Tech Stack
 
 - **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Shadcn UI, Recharts
